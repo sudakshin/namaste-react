@@ -1,3 +1,7 @@
+html {
+	background-color: rgb(216, 216, 216);
+}
+
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -34,10 +38,13 @@
 .res-card:hover {
 	cursor: pointer;
 	border: 1px solid black;
+	box-shadow: 5px 5px 5px rgb(130, 83, 83);
 }
 .res-container {
 	display: flex;
 	flex-wrap: wrap;
+	gap: 20px;
+	background-color: #9f7d7d;
 }
 
 .search {
@@ -45,10 +52,19 @@
 	padding: 10px;
 }
 
+.filter-btn {
+	padding: 10px;
+	margin: 10px;
+	cursor: pointer;
+}
+
 .body {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	justify-content: center;
+	align-items: center; /* Optionally center vertically */
+	min-height: 100vh; /* Makes sure it takes up full viewport height */
+	background-color: #f9f9f9;
 }
 
 .res-logo {
