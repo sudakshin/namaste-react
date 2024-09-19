@@ -1,3 +1,69 @@
-#headin {
-	color: red;
+.header {
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid black;
+	align-items: center;
+}
+.logo-container {
+	padding: 0px;
+	margin: 0px;
+}
+
+.logo {
+	padding: 0px;
+	margin: 0px;
+	width: 10em;
+}
+
+.nav-items > ul {
+	display: flex;
+	font-size: 20px;
+}
+
+.nav-items > ul > li {
+	padding: 1em;
+	list-style: none;
+}
+
+.res-card {
+	margin: 5px;
+	width: 200px;
+	height: 300px;
+	padding: 10px;
+}
+
+.res-card:hover {
+	cursor: pointer;
+	border: 1px solid black;
+}
+.res-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.search {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.res-logo {
+	width: 100%;
+}
+
+.res-card > .info {
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+}
+
+.info > .name {
+	padding: 0px;
+	font-size: 25px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.info span:nth-last-child(-n + 3) {
+	font-size: 18px;
+	padding: 4px;
 }
