@@ -3,6 +3,7 @@ import RestaurantCard from './RestaurantCard';
 
 const Body = () => {
 	const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+	const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
 	useEffect(() => {
 		fetchData();
@@ -15,14 +16,13 @@ const Body = () => {
 
 		const jsonData = await data.json();
 
-		console.log(jsonData);
-		setFilteredRestaurants(
+		const rests =
 			jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-				?.restaurants
-		);
-	};
+				?.restaurants;
 
-	if()
+		setFilteredRestaurants(rests);
+		setListOfRestaurants(rests);
+	};
 
 	return (
 		<div className='body'>
@@ -30,8 +30,8 @@ const Body = () => {
 				<button
 					className='filter-btn'
 					onClick={() => {
-						const topRatedRestaurants = resObj.filter(
-							(res) => res.info.avgRating > 4.5
+						const topRatedRestaurants = filteredRestaurants.filter(
+							(res) => res.info.avgRating >= 4.3
 						);
 						setFilteredRestaurants(topRatedRestaurants);
 					}}
@@ -43,7 +43,7 @@ const Body = () => {
 					className='filter-btn'
 					onClick={() => {
 						console.log('Resetting filter');
-						setFilteredRestaurants(resObj);
+						setFilteredRestaurants(listOfRestaurants);
 					}}
 				>
 					Reset Filter
