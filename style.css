@@ -43,6 +43,7 @@ html {
 .res-container {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 20px;
 	background-color: #9f7d7d;
 }
