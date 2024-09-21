@@ -1,5 +1,9 @@
-html {
+html,
+body {
 	background-color: rgb(216, 216, 216);
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 .header {
@@ -20,8 +24,10 @@ html {
 }
 
 .nav-items > ul {
+	cursor: pointer;
 	display: flex;
 	font-size: 20px;
+	gap: 10px;
 }
 
 .nav-items > ul > li {
@@ -44,6 +50,7 @@ html {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	padding-top: 20px;
 	gap: 20px;
 	background-color: #9f7d7d;
 }
@@ -53,6 +60,19 @@ html {
 	padding: 10px;
 }
 
+.filter {
+	position: fixed;
+	top: 140;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	z-index: 1000;
+	background-color: #333;
+	color: white;
+	padding: 10px 0;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 .filter-btn {
 	padding: 10px;
 	margin: 10px;
@@ -60,11 +80,12 @@ html {
 }
 
 .body {
+	padding-top: 220px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center; /* Optionally center vertically */
-	min-height: 100vh; /* Makes sure it takes up full viewport height */
+	align-items: center;
+	min-height: 100vh;
 	background-color: #f9f9f9;
 }
 
@@ -88,4 +109,16 @@ html {
 .info span:nth-last-child(-n + 3) {
 	font-size: 18px;
 	padding: 4px;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: #333;
+	color: white;
+	padding: 10px 0;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
