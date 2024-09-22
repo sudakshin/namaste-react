@@ -65,6 +65,7 @@ body {
 	top: 140;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	width: 100%;
 	z-index: 1000;
 	background-color: #333;
@@ -121,4 +122,26 @@ body {
 	color: white;
 	padding: 10px 0;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.shimmer-container {
+	padding-top: 220px;
+	display: flex;
+}
+
+.shimmer-card {
+	width: 240em;
+	height: 472px;
+	margin: 5px;
+	padding: 10px;
+	background-color: rgb(148, 135, 135);
+}
+
+.login-btn {
+	padding: 0px 20px;
+	margin: 10px;
+}
+
+.search {
+	border: 0;
 }

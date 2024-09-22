@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react';
 import RestaurantCard from './RestaurantCard';
+import Shimmer from './Shimmer';
 
 const Body = () => {
 	const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 	const [listOfRestaurants, setListOfRestaurants] = useState([]);
+	const [searchText, setSearchText] = useState('');
+
+	console.log('Body Rendered');
 
 	useEffect(() => {
 		fetchData();
@@ -24,9 +28,43 @@ const Body = () => {
 		setListOfRestaurants(rests);
 	};
 
+	if (filteredRestaurants.length === 0) {
+		return <Shimmer />;
+	}
+
 	return (
 		<div className='body'>
 			<div className='filter'>
+				<div className='search'>
+					<input
+						type='text'
+						className='search-box'
+						value={searchText}
+						onChange={(e) => {
+							setSearchText(e.target.value);
+							if (e.target.value === '') {
+								setFilteredRestaurants(listOfRestaurants);
+							}
+						}}
+					/>
+					<button
+						onClick={() => {
+							console.log(searchText);
+							if (searchText === '') {
+								// If search text is empty, show all restaurants
+								setFilteredRestaurants(listOfRestaurants);
+							} else {
+								// Apply the search filter
+								const searched = listOfRestaurants.filter((res) =>
+									res.info.name.toLowerCase().includes(searchText.toLowerCase())
+								);
+								setFilteredRestaurants(searched);
+							}
+						}}
+					>
+						Search
+					</button>
+				</div>
 				<button
 					className='filter-btn'
 					onClick={() => {
