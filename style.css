@@ -95,6 +95,7 @@ body {
 }
 
 .res-card > .info {
+	color: black;
 	display: flex;
 	flex-direction: column;
 	padding: 5px;
@@ -144,4 +145,23 @@ body {
 
 .search {
 	border: 0;
+}
+
+.about,
+.contact,
+.cart,
+.menu {
+	margin-top: 200px;
+	margin-left: 50px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	/* background-color: rgb(105, 105, 105); */
+	padding: 10px;
+}
+
+a:active {
+	color: rgb(136, 136, 138);
 }
