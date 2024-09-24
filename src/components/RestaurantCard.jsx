@@ -22,8 +22,10 @@ const RestaurantCard = (props) => {
 			<div className='info'>
 				<span className='name'>{name}</span>
 				<span className='cuisine'>{cuisines.join(', ')}</span>
-				<span className='rating'>{avgRating} ⭐</span>
-				<span className='del-time'>{sla.slaString}</span>
+				<div className='rate-time'>
+					<span className='del-time'>{sla.slaString}</span>
+					<span className='rating'>{avgRating} ⭐</span>
+				</div>
 			</div>
 		</div>
 	);

@@ -1,8 +1,12 @@
+import User from './User';
+import UserClass from './UserClass';
+
 const About = () => {
 	return (
 		<div className='about'>
 			<h1>About</h1>
-			<h2>This is about Section</h2>
+			<User name={'Sudakshin (fxnl component)'} />
+			<UserClass name={'Sudakshin (class based component)'} />
 		</div>
 	);
 };
